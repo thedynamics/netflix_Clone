@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netflix India</title>
+    <style>
+        /* CSS is merged here */
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: rgb(15, 15, 15);
+        }
+
+        #parent1 {
+            background-image: linear-gradient(rgb(15, 15, 15) 5%, rgba(45, 26, 23, 0.921) 20%, rgb(15, 15, 15) 80%), url(https://tse3.mm.bing.net/th?id=OIP.K_Hrme2LHp0FfZz1zB4a2AHaEK&pid=Api&P=0&h=180);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+
+        #Navigation {
+            height: 80px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 100px 0 60px;
+            mix-blend-mode: screen;
+        }
+
+        .nav {
+            height: 70px;
+            width: 200px;
+            display: flex;
+            align-items: center;
+        }
+
+        .nav img {
+            height: 100%;
+        }
+
+        .navRight {
+            height: 70px;
+            width: 220px;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        #language {
+            height: 30px;
+            width: 130px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 13px;
+            background-color: black;
+            color: white;
+            border: 1px solid white;
+            cursor: pointer;
+        }
+
+        #Sign_in_button {
+            height: 30px;
+            width: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 13px;
+            background-color: #E50914;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        #Sign_in_button:hover {
+            background-color: rgba(193, 17, 25);
+        }
+
+        #main {
+            height: 500px;
+            margin: 0 60px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            box-shadow: 0 0 20px 5px rgba(0, 0, 0, 0.492);
+        }
+
+        input {
+            height: 40px;
+            width: 300px;
+            border-radius: 13px;
+            padding-left: 20px;
+            font-size: medium;
+            border: 1px solid black;
+        }
+
+        #Get_started {
+            height: 40px;
+            width: 150px;
+            border-radius: 13px;
+            background-color: rgb(229, 8, 21);
+            color: white;
+            border: none;
+            font-size: 16px;
+            cursor: pointer;
+            margin-left: 10px;
+        }
+
+        #Get_started:hover {
+            background-color: rgba(193, 17, 25);
+        }
+
+        /* Movie List */
+        #parent2,
+        #parent3,
+        #parent4,
+        #parent5,
+        #Footer {
+            color: white;
+            padding: 50px 150px;
+            border-top: 8px solid #222;
+        }
+
+        #MovieList {
+            height: 300px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .MOlist {
+            height: 280px;
+            width: 150px;
+            background-size: cover;
+            background-position: center;
+            border-radius: 20px;
+            transition: all 0.3s ease;
+            position: relative;
+            cursor: pointer;
+        }
+
+        .MOlist:hover {
+            transform: scale(1.05);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+        }
+
+        .MOcount {
+            position: absolute;
+            left: -25px;
+            top: -25px;
+            font-size: 80px;
+            color: transparent;
+            -webkit-text-stroke: 3px white;
+            font-weight: bold;
+        }
+
+        /* Movie List Images (Advanced Method) */
+        .MOlist:nth-child(1) {
+            background-image: url(https://i.pinimg.com/originals/d9/d0/8a/d9d08a561273da47a27db1cc01313462.jpg);
+        }
+        .MOlist:nth-child(2) {
+            background-image: url(https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi1Pfx9M5uFNdV3imOMLOnbumkAc3MtC4ZFSCUbPUKNMh_I9rBVwv0wh_kAtfo3pUbvuejwtlevHyEF0GC-eJep4KETTUKe1vzuYiTHc_cJ-tX_j_0nsOBq2pK9Aa21hpxbvT4nrr__zpFLmZM3dZyqqxTn1BBWMzkHvotAGWhjIVyNEannzBUj8Bf3jw/s1600/Kranti-Kannada-Movie-Full-Star-Cast-Crew-Wiki.jpg);
+        }
+        .MOlist:nth-child(3) {
+            background-image: url(https://i.ytimg.com/vi/MKGc0BcI6nQ/maxresdefault.jpg);
+        }
+        .MOlist:nth-child(4) {
+            background-image: url(https://tse4.mm.bing.net/th?id=OIP.TDpuZM9-XXmia1B98wjJRgAAAA&pid=Api&P=0&h=180);
+        }
+        .MOlist:nth-child(5) {
+            background-image: url(https://tse1.mm.bing.net/th?id=OIP.qYcDANzWlfW7LEOSEJYHxwHaLP&pid=Api&P=0&h=180);
+        }
+        .MOlist:nth-child(6) {
+            background-image: url(https://tse4.mm.bing.net/th?id=OIP.jNG0gn_ec8KKVYtbkww_MwHaLd&pid=Api&P=0&h=180);
+        }
+
+        /* Features */
+        #parent3 {
+            border-bottom: 8px solid #222;
+        }
+
+        #ReasonList {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        .RSlist {
+            height: 130px;
+            width: 24%;
+            background-color: #222;
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .RSlist h3 {
+            font-size: 16px;
+        }
+
+        /* Questions */
+        #parent4 {
+            padding-bottom: 0;
+        }
+
+        #Qlist {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-evenly;
+        }
+
+        .Qlist {
+            height: 60px;
+            width: 100%;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: #333;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            margin-bottom: 8px;
+            padding: 0 25px;
+        }
+
+        .Qlist:hover {
+            background-color: #444;
+        }
+
+        /* FAQ Content */
+        .Qlist .answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-in-out;
+            padding: 0 25px;
+            background-color: #333;
+        }
+
+        .Qlist.active .answer {
+            max-height: 200px; /* Adjust as needed */
+            padding: 25px;
+            margin-top: 1px;
+        }
+        
+        .Qlist.active .plus-icon {
+            transform: rotate(45deg);
+        }
+
+        .plus-icon {
+            transition: transform 0.3s ease;
+        }
+
+        /* Email & GetStart */
+        #parent5 {
+            padding-top: 0;
+            text-align: center;
+            border-top: none;
+            border-bottom: 8px solid #222;
+        }
+
+        #parent5 > div {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 10px;
+        }
+
+        /* Footer */
+        #Footer {
+            border-top: 8px solid #222;
+        }
+
+        #Flist {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        .FRC {
+            width: 24%;
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 20px;
+        }
+
+        .FRC p {
+            margin-bottom: 10px;
+        }
+
+        .FRC a {
+            color: #ccc;
+            text-decoration: none;
+        }
+
+        #Flist1 {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div id="parent1">
+        <nav id="Navigation">
+            <div class="nav">
+                <img height="100%" src="https://wallpapercave.com/wp/wp5063339.png" alt="Netflix Logo">
+            </div>
+            <div class="navRight">
+                <div id="language">
+                    <h5> <i class="fa-solid fa-language"></i> English <i class="fa-solid fa-caret-down"></i></h5>
+                </div>
+                <div id="Sign_in_button">
+                    <h5>Sign in</h5>
+                </div>
+            </div>
+        </nav>
+        <div id="main">
+            <h1 style="font-size: 60px;">Unlimited movies, TV <br>shows and more</h1>
+            <h3>Starts at ₹149. Cancel at any time.</h3>
+            <br>
+            <h5>Ready to watch? Enter your email to create or restart your membership.</h5>
+            <br>
+            <div>
+                <input type="text" placeholder="Email address">
+                <button id="Get_started">Get Started <i class="fas fa-angle-right"></i></button>
+            </div>
+        </div>
+    </div>
+    <div id="parent2">
+        <h1 style="color: white;">Trending Now</h1>
+        <br>
+        <div id="MovieList">
+            <div class="MOlist">
+                <div class="MOcount"><h1>1</h1></div>
+            </div>
+            <div class="MOlist">
+                <div class="MOcount"><h1>2</h1></div>
+            </div>
+            <div class="MOlist">
+                <div class="MOcount"><h1>3</h1></div>
+            </div>
+            <div class="MOlist">
+                <div class="MOcount"><h1>4</h1></div>
+            </div>
+            <div class="MOlist">
+                <div class="MOcount"><h1>5</h1></div>
+            </div>
+            <div class="MOlist">
+                <div class="MOcount"><h1>6</h1></div>
+            </div>
+        </div>
+    </div>
+    <div id="parent3">
+        <h1>More Reasons to Join</h1>
+        <div id="ReasonList">
+            <div class="RSlist">
+                <h3 id="Felist">Cancel or switch plans anytime</h3>
+            </div>
+            <div class="RSlist">
+                <h3 id="Felist">A safe place just for kids</h3>
+            </div>
+            <div class="RSlist">
+                <h3 id="Felist">Watch on your favourite devices</h3>
+            </div>
+            <div class="RSlist">
+                <h3 id="Felist">Stories tailored to your taste</h3>
+            </div>
+        </div>
+    </div>
+    <div id="parent4">
+        <div>
+            <h1>Frequently Asked Questions</h1>
+        </div>
+        <br>
+        <div id="Qlist-container">
+            <div class="Qlist">
+                <h3>What is Netflix?</h3>
+                <h3 class="plus-icon">+</h3>
+                <div class="answer" style="display: none;">
+                    <p>Netflix is a streaming service that offers a wide variety of award-winning TV shows, movies, anime, documentaries, and more on thousands of internet-connected devices.</p>
+                </div>
+            </div>
+            <div class="Qlist">
+                <h3>How much does Netflix Cost?</h3>
+                <h3 class="plus-icon">+</h3>
+                <div class="answer" style="display: none;">
+                    <p>Watch Netflix on your smartphone, tablet, Smart TV, laptop, or streaming device, all for one fixed monthly fee. Plans range from ₹149 to ₹649 a month. No extra costs, no contracts.</p>
+                </div>
+            </div>
+            <div class="Qlist">
+                <h3>Where can I watch?</h3>
+                <h3 class="plus-icon">+</h3>
+                <div class="answer" style="display: none;">
+                    <p>Watch anywhere, anytime. Sign in with your Netflix account to watch instantly on the web at netflix.com from your personal computer or on any internet-connected device.</p>
+                </div>
+            </div>
+            <div class="Qlist">
+                <h3>How do I cancel?</h3>
+                <h3 class="plus-icon">+</h3>
+                <div class="answer" style="display: none;">
+                    <p>Netflix is flexible. There are no pesky contracts and no commitments. You can easily cancel your account online in two clicks. There are no cancellation fees – start or stop your account anytime.</p>
+                </div>
+            </div>
+            <div class="Qlist">
+                <h3>What can I watch on Netflix?</h3>
+                <h3 class="plus-icon">+</h3>
+                <div class="answer" style="display: none;">
+                    <p>Netflix has an extensive library of feature films, documentaries, TV shows, anime, award-winning Netflix originals, and more. Watch as much as you want, anytime you want.</p>
+                </div>
+            </div>
+            <div class="Qlist">
+                <h3>Is Netflix good for Kids?</h3>
+                <h3 class="plus-icon">+</h3>
+                <div class="answer" style="display: none;">
+                    <p>The Netflix Kids experience is included in your membership to give parents control while kids enjoy family-friendly TV shows and movies in their own space.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="parent5">
+        <h5>Ready to watch? Enter your email to create or restart your membership.</h5>
+        <br>
+        <div>
+            <input type="text" placeholder="Email address">
+            <button id="Get_started">Get Started <i class="fas fa-angle-right"></i></button>
+        </div>
+    </div>
+    <br><br>
+    <div id="Footer">
+        <div>
+            <h4>Questions? Call <u>000-800-919-1743</u></h4>
+        </div>
+        <br><br>
+        <div id="Flist">
+            <div class="FRC">
+                <p><a href="https://help.netflix.com/en" target="_blank">FAQ</a></p>
+                <p><a href="https://help.netflix.com/en" target="_blank">Investor Relations</a></p>
+                <p><a href="https://help.netflix.com/en" target="_blank">Privacy</a></p>
+                <p><a href="https://help.netflix.com/en" target="_blank">Speed Test</a></p>
+            </div>
+            <div class="FRC">
+                <p><a href="https://help.netflix.com/en" target="_blank">Help Center</a></p>
+                <p><a href="https://help.netflix.com/en" target="_blank">Jobs</a></p>
+                <p><a href="https://help.netflix.com/en" target="_blank">Cookie Preferences</a></p>
+                <p><a href="https://help.netflix.com/en" target="_blank">Legal Notices</a></p>
+            </div>
+            <div class="FRC">
+                <p><a href="https://help.netflix.com/en" target="_blank">Account</a></p>
+                <p><a href="https://help.netflix.com/en" target="_blank">Ways to Watch</a></p>
+                <p><a href="https://help.netflix.com/en" target="_blank">Corporate Information</a></p>
+                <p><a href="https://help.netflix.com/en" target="_blank">Only on Netflix</a></p>
+            </div>
+            <div class="FRC">
+                <p><a href="https://help.netflix.com/en" target="_blank">Media Centre</a></p>
+                <p><a href="https://help.netflix.com/en" target="_blank">Terms of Use</a></p>
+                <p><a href="https://help.netflix.com/en" target="_blank">Contact Us</a></p>
+            </div>
+        </div>
+        <br><br>
+        <div id="language">
+            <h5> <i class="fa-solid fa-language"></i> English <i class="fa-solid fa-caret-down"></i></h5>
+        </div>
+        <br><br>
+        <div id="Flist1">
+            <p>Netflix India</p>
+        </div>
+    </div>
+    
+    <script>
+        // JavaScript for the FAQ Accordion
+        const faqQuestions = document.querySelectorAll('.Qlist');
+
+        faqQuestions.forEach(question => {
+            question.addEventListener('click', () => {
+                const answer = question.querySelector('.answer');
+                const plusIcon = question.querySelector('.plus-icon');
+                const isCurrentlyOpen = question.classList.contains('active');
+
+                // Close all other open answers
+                faqQuestions.forEach(otherQuestion => {
+                    if (otherQuestion !== question) {
+                        otherQuestion.classList.remove('active');
+                        otherQuestion.querySelector('.answer').style.display = 'none';
+                    }
+                });
+
+                // Toggle the clicked question's answer
+                if (isCurrentlyOpen) {
+                    question.classList.remove('active');
+                    answer.style.display = 'none';
+                } else {
+                    question.classList.add('active');
+                    answer.style.display = 'block';
+                }
+            });
+        });
+    </script>
+</body>
+</html>
