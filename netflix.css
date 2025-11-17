@@ -1,0 +1,329 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#parent1{
+    background-image: linear-gradient(rgb(15, 15, 15) 5%, rgba(45, 26, 23, 0.921) 20%, rgb(15, 15, 15) 80%), url(Netflix\ Frame.jpeg);
+    
+}
+#Navigation{
+    border: 0px solid red;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 100px 0px 60px;
+    border: none;
+    mix-blend-mode:screen;
+}
+.nav{
+    border: 1px solid blue;
+    height: 70px;
+    width: 200px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: none;
+}
+.navRight{
+    border: 1px solid blue;
+    height: 70px;
+    width: 220px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border: none;
+}
+#language{
+    border: 1px solid white;
+    height: 30px;
+    width: 130px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 13px;
+    background-color: black;
+    color: white;
+}
+#Sign_in_button{
+    border: 1px solid green;
+    height: 30px;
+    width: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 13px;
+    background-color:antiquewhite;
+    border: none;
+}
+#Sign_in_button:hover{
+    background-color: rgba(255, 255, 255, 0.751);
+    color: black;
+}
+/* Title Section */
+#main{
+    border: 1px solid green;
+    border-radius: 20px;
+    height: 500px;
+    margin: 0px 60px 0px 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    box-shadow: 0px 0px 20px 5px rgba(0, 0, 0, 0.492);
+    /* background-image: url(Netflix\ Frame.jpeg); */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.355), rgba(0, 0, 0, 0.927)), url(https://tse3.mm.bing.net/th?id=OIP.K_Hrme2LHp0FfZz1zB4a2AHaEK&pid=Api&P=0&h=180);
+    background-size: cover;
+    border: none;
+    background-repeat: no-repeat;
+}
+input{
+    border: 1px solid black;
+    height: 40px;
+    width: 300px;
+    border-radius: 13px;
+    padding-left: 0px;
+    font-size: medium;
+}
+#Get_started{
+    height: 40px;
+    width: 100px;
+    border-radius: 13px;
+    background-color: rgb(229, 8, 21);
+    color: white;
+}
+#Get_started:hover{
+    background-color: rgba(193, 17, 25);
+    color: white;
+}
+/* Movie List */
+#parent2{
+    border: 1px solid blue;
+    height: 400px;
+    margin: 0px 150px 0px 150px;
+    border: none;
+}
+#MovieList{
+    border: 1px solid red;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: none;
+}
+/* Movie List Image 1 */
+.MOlist{
+    border: 1px solid red;
+    height: 280px;
+    width: 150px;
+    background-color: aqua;
+    background-image: url(https://i.pinimg.com/originals/d9/d0/8a/d9d08a561273da47a27db1cc01313462.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-radius: 20px;
+    border: none;
+}
+/* Movie List Image 2 */
+.MOlist1{
+    border: 1px solid red;
+    height: 280px;
+    width: 150px;
+    background-color: aqua;
+    background-image: url(https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi1Pfx9M5uFNdV3imOMLOnbumkAc3MtC4ZFSCUbPUKNMh_I9rBVwv0wh_kAtfo3pUbvuejwtlevHyEF0GC-eJep4KETTUKe1vzuYiTHc_cJ-tX_j_0nsOBq2pK9Aa21hpxbvT4nrr__zpFLmZM3dZyqqxTn1BBWMzkHvotAGWhjIVyNEannzBUj8Bf3jw/s1600/Kranti-Kannada-Movie-Full-Star-Cast-Crew-Wiki.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-radius: 20px;
+    border: none;
+}
+/* Movie List Image 3 */
+.MOlist2{
+    border: 1px solid red;
+    height: 280px;
+    width: 150px;
+    background-color: aqua;
+    background-image: url(https://i.ytimg.com/vi/MKGc0BcI6nQ/maxresdefault.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-radius: 20px;
+    border: none;
+}
+/* Movie List Image 4 */
+.MOlist3{
+    border: 1px solid red;
+    height: 280px;
+    width: 150px;
+    background-color: aqua;
+    background-image: url(https://tse4.mm.bing.net/th?id=OIP.TDpuZM9-XXmia1B98wjJRgAAAA&pid=Api&P=0&h=180);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-radius: 20px;
+    border: none;
+}
+/* Movie List Image 5 */
+.MOlist4{
+    border: 1px solid red;
+    height: 280px;
+    width: 150px;
+    background-color: aqua;
+    background-image: url(https://tse1.mm.bing.net/th?id=OIP.qYcDANzWlfW7LEOSEJYHxwHaLP&pid=Api&P=0&h=180);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-radius: 20px;
+    border: none;
+}
+/* Movie List Image 6 */
+.MOlist5{
+    border: 1px solid red;
+    height: 280px;
+    width: 150px;
+    background-color: aqua;
+    background-image: url(https://tse4.mm.bing.net/th?id=OIP.jNG0gn_ec8KKVYtbkww_MwHaLd&pid=Api&P=0&h=180);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-radius: 20px;
+    border: none;
+}
+.MOcount{
+    position: relative;
+    right: 25px;
+    -webkit-text-stroke: 3px white;
+}
+/* Movie List Hover */
+.MOlist:hover{
+    height: 290px;
+    width: 160px;
+}
+.MOlist1:hover{
+    height: 290px;
+    width: 160px;
+}
+.MOlist2:hover{
+    height: 290px;
+    width: 160px;
+}
+.MOlist3:hover{
+    height: 290px;
+    width: 160px;
+}
+.MOlist4:hover{
+    height: 290px;
+    width: 160px;
+}
+.MOlist5:hover{
+    height: 290px;
+    width: 160px;
+}
+/* Features */
+#parent3{
+    border: 1px solid blue;
+    height: 240px;
+    margin: 0px 150px 0px 150px;
+    color: white;
+    border: none;
+}
+#ReasonList{
+    border: 1px solid red;
+    height: 170px;
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    border: none;
+}
+.RSlist{
+    border: 1px solid red;
+    height: 130px;
+    width: 265px;
+    border-radius: 25px;
+    background-color: rgba(41, 41, 41, 0.401);
+    border: none;
+}
+#Felist{
+    padding-left: 20px;
+    padding-top: 20px;
+    padding-right: 40px;
+    font-size: 16px;
+}
+.Ficon{
+    display: flex;
+    align-items: end;
+    justify-content: end;
+    padding-right: 30px;
+    padding-top: 10px;
+    color: rgb(187, 67, 67);
+}
+/* Questions */
+#parent4{
+    border: 1px solid blue;
+    height: 500px;
+    margin: 0px 150px 0px 150px;
+    color: white;
+    border: none;
+}
+#Qlist{
+    border: 1px solid green;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    border: none;
+}
+.Qlist{
+    border: 1px solid red;
+    height: 60px;
+    width: 100%;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgb(40, 40, 40);
+    border: none;
+}
+.Qlist:hover{
+    background-color: rgb(63, 63, 63);
+}
+/* Email & GetStart */
+#parent5{
+    border: 1px solid blue;
+    height: 80px;
+    margin: 0px 150px 0px 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    border: none;
+}
+/* Footer */
+#Footer{
+    border: 1px solid green;
+    height: 450px;
+    margin: 0px 150px 0px 150px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    border: none;
+}
+#Flist{
+    border: 1px solid red;
+    height: 200px;
+    width: 100%;
+    display: flex;
+    border: none;
+}
+.FRC{
+    border: 1px solid blue;
+    height: 200px;
+    width: 300px;
+    border: none;
+}
